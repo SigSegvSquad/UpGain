@@ -42,9 +42,21 @@ app.get("/post", (req, res) => {
 
 //Contact page
 app.get("/contact", (req, res) => {
+<<<<<<< HEAD
   res.sendFile(path.join(__dirname, "views/contact.html"));
 });
 
+=======
+    res.sendFile(path.join(__dirname, "views/contact.html"));
+  });
+
+//file uploaded
+app.get("/newpost", (req, res) => {
+    res.sendFile(path.join(__dirname, "views/post.html"));
+});
+
+
+>>>>>>> 75ec00bea089f7297ee0e458757498f28bb75d11
 app.listen(PORT, () => {
     console.log(`Your server is running on port: ${PORT}`);
   });
