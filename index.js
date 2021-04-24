@@ -45,6 +45,12 @@ app.get("/contact", (req, res) => {
     res.sendFile(path.join(__dirname, "views/contact.html"));
   });
 
+//file uploaded
+app.get("/newpost", (req, res) => {
+    res.sendFile(path.join(__dirname, "views/post.html"));
+});
+
+
 app.listen(PORT, () => {
     console.log(`Your server is running on port: ${PORT}`);
   });

@@ -36,6 +36,12 @@
             background-image: linear-gradient(#26ebc0, #34facf);
         }
 
+        body {
+            color: #1a202c;
+            text-align: left;
+            background-color: #e2e8f0;
+        }
+
         header h3 {
             color: white;
             font-size: 6;
@@ -45,6 +51,32 @@
             list-style-type: none;
             color: #04946e;
         }
+
+        .card {
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .1), 0 1px 2px 0 rgba(0, 0, 0, .06);
+        }
+
+        .card {
+            position: relative;
+            display: flex;
+            padding: 30px;
+            margin: auto;
+            flex-direction: column;
+            min-width: 0;
+            max-width: 40%;
+            word-wrap: break-word;
+            background-color: #fff;
+            background-clip: border-box;
+            border: 0 solid rgba(0, 0, 0, .125);
+            border-radius: .25rem;
+        }
+
+        .card-body {
+            flex: 1 1 auto;
+            min-height: 1px;
+            padding: 1rem;
+        }
+
     </style>
 </head>
 
@@ -94,24 +126,30 @@
     </header>
 
     <main>
-        <div class="points">
-            <h3>Some points to keep in mind</h3>
-            <ul>
-                <li>Please upload documents in pdf format only.</li>
-                <li>For pptx or docx types, please use online converters for now.</li>
-                <li>We are working on enabling other formats too :)</li>
-            </ul>
-        </div>
+        <div class="card">
+            <div class="card-body">
+                <div class="d-flex flex-column align-items-center text-center">
+                    <div class="points">
+                        <h3>Some points to keep in mind</h3>
+                        <ul>
+                            <li>Please upload documents in pdf format only.</li>
+                            <li>For pptx or docx types, please use online converters for now.</li>
+                            <li>We are working on enabling other formats too :)</li>
+                        </ul>
+                    </div>
 
-        <div class="upload">
-            <div class="input-group mb-3">
-                <span class="input-group-text" id="basic-addon3">Title</span>
-                <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+                    <div class="upload">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon3">Title</span>
+                            <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+                        </div>
+                        <form action="/newpost">
+                            <input type="file" id="myFile" name="filename">
+                            <input type="submit">
+                        </form>
+                    </div>
+                </div>
             </div>
-            <form action="/action_page.php">
-                <input type="file" id="myFile" name="filename">
-                <input type="submit">
-            </form>
         </div>
 
     </main>
