@@ -40,6 +40,11 @@ app.get("/post", (req, res) => {
     res.sendFile(path.join(__dirname, "views/post.html"));
   });
 
+//Contact page
+app.get("/contact", (req, res) => {
+    res.sendFile(path.join(__dirname, "views/contact.html"));
+  });
+
 app.listen(PORT, () => {
     console.log(`Your server is running on port: ${PORT}`);
   });
