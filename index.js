@@ -4,6 +4,8 @@ const path = require("path");
 
 const app = express();
 
+app.set('view engine', 'ejs');
+
 const PORT = process.env.PORT || 3000;
 
 app.use("views", express.static(path.join(__dirname, "views")));
@@ -37,16 +39,13 @@ app.get("/upload", (req, res) => {
 
 //Post page
 app.get("/post", (req, res) => {
-    res.sendFile(path.join(__dirname, "views/post.html"));
+    const title = req.query.title;
+    const addr = req.query.addr;
+    res.render(path.join(__dirname, "views/post"), {"title":title,"addr":addr});
   });
 
 //Contact page
 app.get("/contact", (req, res) => {
-<<<<<<< HEAD
-  res.sendFile(path.join(__dirname, "views/contact.html"));
-});
-
-=======
     res.sendFile(path.join(__dirname, "views/contact.html"));
   });
 
@@ -56,7 +55,6 @@ app.get("/newpost", (req, res) => {
 });
 
 
->>>>>>> 75ec00bea089f7297ee0e458757498f28bb75d11
 app.listen(PORT, () => {
     console.log(`Your server is running on port: ${PORT}`);
   });
