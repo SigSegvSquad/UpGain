@@ -5,13 +5,17 @@ A web platform for students of all ages and all different fields to come togethe
 
 The incentive💸 we would provide is that the students can get some 💲money in hand fand this will reduce our time that would have gone in research and review of the material we found, as we know that it is already proofed by the seniors and possibly teachers.
 
-## Reltaed Links
+
+
+## Related Links
 
 [Our Youtube Video](https://www.youtube.com/watch?v=HBrpIl_9ZCs)
 
-[The Devfolio Page]()
+[The Devfolio Page](https://devfolio.co/submissions/upgain-13a3)
 
-[A Running Demonstration]()
+[A Running Demonstration](https://upgaiin.glitch.me/)
+
+
 
 ## Team SigSegVSquad
 
